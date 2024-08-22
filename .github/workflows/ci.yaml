@@ -1,0 +1,17 @@
+name: Kubernetes manifests CI
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    name: Kubernets manifests CI
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - uses: azure/k8s-lint@v3
+        with:
+          manifests: |
+              k8s/deployment.yaml
+          kubeconformOpts: -summary
