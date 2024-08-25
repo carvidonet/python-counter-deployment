@@ -5,15 +5,11 @@ metadata:
     app: python-counter
   name: python-counter
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: python-counter
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
+  strategy: {}
   template:
     metadata:
       labels:
