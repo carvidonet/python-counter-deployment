@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - image: ghcr.io/carvidonet/python-counter:1.3.6
-        name: counter
+        names: counter
         resources: {}
 status: {}
