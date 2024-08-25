@@ -1,0 +1,15 @@
+name: Create Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  ci:
+    name: Kubernets manifests CI
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: azure/k8s-lint@v3
+        with:
+          manifests: |
+              k8s/deployment.yaml
+          kubeconformOpts: -summary
