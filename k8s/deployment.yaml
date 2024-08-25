@@ -12,7 +12,7 @@ spec:
   strategy: {}
   template:
     metadata:
-      labels:
+      labelsasdf:
         app: python-counter
     spec:
       containers:
